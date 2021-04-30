@@ -2,7 +2,7 @@ import React from 'react'
 import IconButton from '@material-ui/core/IconButton';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 
-export const ReceiverChat = () => {
+export const ReceiverChat = (props) => {
     const styleReceiver = {
         padding: '10px',
         // border: '1px outset #1C6EA4',
@@ -23,7 +23,7 @@ export const ReceiverChat = () => {
     return (
         <div>
             <span style={styleReceiver}>
-                hello
+                {props.message}
             </span>
             <IconButton style={threeDots}>
                 <FavoriteBorderIcon/>

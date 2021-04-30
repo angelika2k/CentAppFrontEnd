@@ -14,17 +14,15 @@ import Teacher2StuPersonal from './Components/TeacherVew/Teacher2StuPersonal'
 
 
 function App() {
-  const Style = {
-    backgroundColor: "#f7f3e9",
-  }
  
   return (
-    <div className="App" style={Style}>
-      <Container>
+    <div className="App">
+      <Container style={{backgroundColor:"white",marginTop:"50px",marginBottom:"50px",borderRadius:"10px"}}>
         <Router>
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/mychat" component={MyChat} />
+            <Route path="/mychat/:id" component={<MyChat/>} />
             <Route path="/stuview" component={TutoryCommonStuUpdateView} />
             <Route path="/clspersonal" component={StudentViewClassPersonal}/>
             <Route path="/class" component={Classes}/>

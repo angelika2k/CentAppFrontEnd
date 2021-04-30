@@ -11,15 +11,6 @@ export const Progress = () => {
         // backgroundColor: "red"
     }
 
-    const glassStyle = {
-        background: "rgba(255, 255, 255, 0.25)",
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-        backdropFilter: "blur(4px)",
-        WebkitBackdropFilter: " blur(4px)",
-        borderRadius: "10px",
-        border: " 1px solid rgba(255, 255, 255, 0.18)"
-    }
-
     const padding = {
         padding: "20px"
     }
@@ -30,18 +21,18 @@ export const Progress = () => {
     return (
         <div style={style}>
             <div>
-                <Grid container style={glassStyle}>
-                    <Grid container style={glassStyle}>
+                <Grid container>
+                    <Grid container>
                         <Grid item sm={3} style={{ textAlign: 'center' }}>
                             <a href="/">
                                 <CentLogo />
                             </a>
                         </Grid>
-                        <Grid item sm={9} style={glassStyle}>
+                        <Grid item sm={9}>
                             <h2 style={{textAlign:"center"}}>Progress</h2>
                         </Grid>
                     </Grid>
-                    <Grid item sm={4} style={glassStyle, margin}>
+                    <Grid item sm={4} style={margin}>
                         <ProgressList />
                     </Grid>
                 </Grid>

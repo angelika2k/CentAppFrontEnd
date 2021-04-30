@@ -1,27 +1,31 @@
+import { Chat } from '@material-ui/icons'
 import React from 'react'
 import { CentLogo } from './CentLogo'
 import { ChatPerson } from './ChatPerson'
 
-export const MyChatLeftBar = () => {
 
-
-    const glassStyle = {
-        background: "rgba(255, 255, 255, 0.25)",
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-        backdropFilter: "blur(4px)",
-        WebkitBackdropFilter: " blur(4px)",
-        borderRadius: "10px",
-        border: " 1px solid rgba(255, 255, 255, 0.18)"
-    }
-
-
-    let names = ["John", "Angelika", "Amali", "Puli", "Booh", "Thanu", "Kitty"]
-
+export const MyChatLeftBar = (props) => {
+    var ChatList = props.chats
     return (
         <div>
-                {names.map((chatname, i) => {
-                    return <ChatPerson name={chatname} chat={'hi'} style={glassStyle} />
-                })} 
+            {ChatList.map((chat, i) => {
+                if (chat.members[0] == "0774766597") {
+                    var lastMessage =chat.chats[chat.chats.length - 1].message
+                    if (lastMessage.length >= 20){
+                         lastMessage =  lastMessage.slice(0,19)+"..."
+                    }
+                    return <ChatPerson name={chat.members[1]} chat={lastMessage} chatId={chat.id} />
+                }
+                else {
+                    var lastMessage =chat.chats[chat.chats.length - 1].message
+                    if (lastMessage.length >= 20){
+                         lastMessage =  lastMessage.slice(0,19)+"..."
+                    }
+                    return <ChatPerson name={chat.members[0]} chat={lastMessage} chatId={chat.id} />
+
+                }
+            })}
         </div>
     )
+
 }

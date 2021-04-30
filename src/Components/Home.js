@@ -10,15 +10,6 @@ export const Home = () => {
         // backgroundColor: "red"
     }
 
-    const glassStyle = {
-        background: "rgba(255, 255, 255, 0.25)",
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-        backdropFilter: "blur(4px)",
-        WebkitBackdropFilter: " blur(4px)",
-        borderRadius: "10px",
-        border: " 1px solid rgba(255, 255, 255, 0.18)"
-    }
-
     const padding = {
         padding: "20px"
     }
@@ -42,7 +33,7 @@ export const Home = () => {
     return (
 
         <div style={style}>
-            <Grid container style={glassStyle}>
+            <Grid container >
                 <h1 style={padding}>Hi Dude!</h1>
                 <Container>
                     <Grid container>

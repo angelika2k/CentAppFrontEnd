@@ -10,7 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import PublishIcon from '@material-ui/icons/Publish';
 import AlarmIcon from '@material-ui/icons/Alarm';
 
-export const AssignmentReceived = (props) => {
+export const Class = (props) => {
 
 
     const styleReceiver = {

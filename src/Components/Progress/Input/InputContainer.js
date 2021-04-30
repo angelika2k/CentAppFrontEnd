@@ -20,22 +20,15 @@ const useStyle = makeStyles((theme) => ({
 export default function InputContainer() {
     const classes = useStyle();
     const [open, setOpen] = useState(false);
-    const glassStyle = {
-        background: "#ccffbd",
-        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
-        backdropFilter: "blur(4px)",
-        WebkitBackdropFilter: " blur(4px)",
-        borderRadius: "10px",
-        border: " 1px solid rgba(255, 255, 255, 0.18)"
-    }
+ 
     return (
         <div className={classes.root} >
             <Collapse in={open}>
-                <InputCardDesign setOpen={setOpen} style={glassStyle} />
+                <InputCardDesign setOpen={setOpen}/>
             </Collapse>
             <Collapse in={!open}>
                 <Paper className={classes.addCard} elevation={0} onClick={() => setOpen(!open)}
-                    style={glassStyle}>
+                   >
                     <Typography>
                         + Add a Card
                 </Typography>
