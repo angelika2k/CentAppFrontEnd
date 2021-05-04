@@ -9,17 +9,13 @@ import Grid from '@material-ui/core/Grid'
 //     }
 // }))
 export const ChatHeadingFromHome = (props) => {
-    const style = {
-        backgroundColor: "DodgerBlue",
-        padding: "15px"
-    }
 
     const padding = {
-        padding: "15px"
+        padding: "10px"
     }
 
+
     return (
-        <div style={style.divStyle}>
             <Grid container>
                 <Grid item sm={3} style = {padding}>
                     <Avatar alt="Cent" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT2EgncLjz34RAF0hJBmctuSybA3luujCggw&usqp=CAU" />
@@ -28,7 +24,6 @@ export const ChatHeadingFromHome = (props) => {
                     <h2>{props.name}</h2>
                 </Grid>
             </Grid>
-        </div>
     )
 }
 

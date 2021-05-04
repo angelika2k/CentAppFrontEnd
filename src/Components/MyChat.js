@@ -10,7 +10,7 @@ export const MyChat = () => {
 
   var style = {
     paddingTop: "1px",
-    height: '100vh',
+    height: '95vh',
     margin:"50px"
   }
 
@@ -110,10 +110,10 @@ export const MyChat = () => {
   //   }
   // })
 
-  for(var id = 0; id < ChatCollections.length; id++){
-    var openedChat = ChatCollections[id]
-    console.log(ChatCollections.id)
-  }
+  // for(var id = 0; id < ChatCollections.length; id++){
+  //   var openedChat = ChatCollections[id]
+  //   console.log(ChatCollections.id)
+  // }
   // }
 
 
@@ -133,7 +133,7 @@ export const MyChat = () => {
             <MyChatLeftBar chats={ChatCollections} />
           </Grid>
           <Grid item xs={9}>
-            <MyChatRightBar chat={openedChat} />
+            <MyChatRightBar chat={ChatCollections} />
           </Grid>
         </Grid>
       </Grid>

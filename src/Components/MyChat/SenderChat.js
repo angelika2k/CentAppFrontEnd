@@ -17,7 +17,7 @@ export const SenderChat = (props) => {
         WebkitBackdropFilter: " blur(4px)",
         border: " 1px solid rgba(255, 255, 255, 0.18)"
     }
-
+    console.log("hi")
     return (
         <div>
             <span style={styleSender}>{props.message}</span>

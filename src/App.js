@@ -3,7 +3,7 @@ import { Classes } from './Components/Classes'
 import { Home } from './Components/Home'
 import { MyChat } from './Components/MyChat'
 import { StudentViewClassPersonal } from './Components/StudentViewClassPersonal'
-import { TutoryCommonStuUpdateView} from './Components/TutoryCommonStuUpdateView'
+import { TutoryCommonStuUpdateView } from './Components/TutoryCommonStuUpdateView'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { AdminToStuChat } from './Components/StudentViewCenter/AdminToStuChat'
 import { Progress } from './Components/Progress'
@@ -14,29 +14,27 @@ import Teacher2StuPersonal from './Components/TeacherVew/Teacher2StuPersonal'
 
 
 function App() {
- 
-  return (
-    <div className="App">
-      <Container style={{backgroundColor:"white",marginTop:"50px",marginBottom:"50px",borderRadius:"10px"}}>
-        <Router>
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/mychat" component={MyChat} />
-            <Route path="/mychat/:id" component={<MyChat/>} />
-            <Route path="/stuview" component={TutoryCommonStuUpdateView} />
-            <Route path="/clspersonal" component={StudentViewClassPersonal}/>
-            <Route path="/class" component={Classes}/>
-            <Route path="/adminmsg" component={AdminToStuChat}/>
-            <Route path="/progress" component={Progress}/>
-            <Route path="/techview" component={TeacherView}/>
-            <Route path="/TeachToAdminChat" component={TeacherToAdminChat}/>
-            <Route path="/TeachClsWork" component={TeacherClassWork}/>
-            <Route path="/Tech2Stu" component={Teacher2StuPersonal}/>
-          </Switch>
-        </Router>
-      </Container>
-    </div>
 
+
+  return (
+    <Container style={{ backgroundColor: "white", marginTop: "10px", paddingTop: "10px", marginBottom: "10px", borderRadius: "10px" }}>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/mychat" component={MyChat} />
+          <Route path="/mychat/:id" component={<MyChat />} />
+          <Route path="/stuview" component={TutoryCommonStuUpdateView} />
+          <Route path="/clspersonal" component={StudentViewClassPersonal} />
+          <Route path="/class" component={Classes} />
+          <Route path="/adminmsg" component={AdminToStuChat} />
+          <Route path="/progress" component={Progress} />
+          <Route path="/techview" component={TeacherView} />
+          <Route path="/TeachToAdminChat" component={TeacherToAdminChat} />
+          <Route path="/TeachClsWork" component={TeacherClassWork} />
+          <Route path="/Tech2Stu" component={Teacher2StuPersonal} />
+        </Switch>
+      </Router>
+    </Container>
   );
 }
 

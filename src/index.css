@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://thumbs.dreamstime.com/b/abstract-colorful-bright-color-paint-brush-art-background-multi-painting-acrylic-water-wallpaper-pastel-gradient-mixed-soft-oil-117219626.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+ background-size: cover;
 }
 
 code {

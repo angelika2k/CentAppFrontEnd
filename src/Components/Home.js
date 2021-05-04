@@ -6,7 +6,13 @@ import { ChatHeadingFromHome } from './Home/ChatHeadingFromHome'
 export const Home = () => {
     const style = {
         paddingTop: "50px",
-        height: '100vh'
+        height: '95vh',
+        background: "rgba(255, 255, 255, 0.25)",
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        backdropFilter: "blur(4px)",
+        WebkitBackdropFilter: " blur(4px)",
+        borderRadius: "10px",
+        border: " 1px solid rgba(255, 255, 255, 0.18)"
         // backgroundColor: "red"
     }
 
@@ -31,11 +37,8 @@ export const Home = () => {
     ]
 
     return (
-
-        <div style={style}>
-            <Grid container >
+            <Grid container style={style}>
                 <h1 style={padding}>Hi Dude!</h1>
-                <Container>
                     <Grid container>
                         <Grid item sm={6} style={padding}>
                             <a href="/mychat">
@@ -74,8 +77,6 @@ export const Home = () => {
                             )
                         })}
                     </Grid>
-                </Container>
             </Grid>
-        </div >
     )
 }

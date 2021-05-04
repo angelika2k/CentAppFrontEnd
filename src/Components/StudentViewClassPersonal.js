@@ -9,11 +9,11 @@ export const StudentViewClassPersonal = () => {
 
     const style = {
         paddingTop: "50px",
-        height: '100vh'
+        height: '95vh'
     }
 
     return (
-        <div style={style}>
+        <div style={style} >
             <Grid container>
                 <Grid item xs={3}>
                     <a href="/">

@@ -1,13 +1,14 @@
 import { Divider } from '@material-ui/core';
 import React from 'react'
 
+
 import { StudyMaterial } from '../Assignment/StudyMaterial';
 import { AssignmentReceived } from '../Assignment/AssignmentReceived'
 import { Class } from '../Assignment/Class';
 
 export const TutoryRightBar = () => {
     const space = {
-        padding: "15px"
+        padding: "30px"
     }
     const Marginspace = {
         margin: "5px"
@@ -72,19 +73,18 @@ export const TutoryRightBar = () => {
     }
 
     return (
-        <div style={space}>
-            {classUpdateCollection.classUpdate.map((classUpdate, i) => {
-                if (classUpdate.type == "assignment") {
-                    return <span><AssignmentReceived classUpdate={classUpdate} /> <Divider style={Marginspace} /></span>
-                }
-                else if (classUpdate.type == "studyMaterial") {
-                    return <span><StudyMaterial classUpdate={classUpdate} /> <Divider style={Marginspace} /></span>
-                }
-                else if (classUpdate.type == "class") {
-                    return <span><Class classUpdate={classUpdate} /><Divider style={Marginspace}/></span>
-                }
-            })}
-
+        <div style={space , {overflowY:"scroll"}}>
+                {classUpdateCollection.classUpdate.map((classUpdate, i) => {
+                    if (classUpdate.type == "assignment") {
+                        return <span><AssignmentReceived classUpdate={classUpdate} /> <Divider style={Marginspace} /></span>
+                    }
+                    else if (classUpdate.type == "studyMaterial") {
+                        return <span><StudyMaterial classUpdate={classUpdate} /> <Divider style={Marginspace} /></span>
+                    }
+                    else if (classUpdate.type == "class") {
+                        return <span><Class classUpdate={classUpdate} /><Divider style={Marginspace} /></span>
+                    }
+                })}
         </div>
     )
 }
