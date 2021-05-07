@@ -6,18 +6,27 @@ import { CentLogo } from './MyChat/CentLogo'
 export const Progress = () => {
 
     const style = {
-        paddingTop: "50px",
-        height: '100vh'
-        // backgroundColor: "red"
+        height: '85vh',
+        margin: "50px",
+        width: '185vh',
+        backgroundColor: "#F2F2F2"
     }
 
-    const padding = {
-        padding: "20px"
+    const divStyle = {
+        height: '71vh',
+        width: '175vh',
+        backgroundImage: "url(https://i.pinimg.com/originals/ab/ab/60/abab60f06ab52fa7846593e6ae0c9a0b.png)",
+        overflowY: "scroll",
+        marginLeft: '5vh',
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)"
     }
 
-    const margin = {
-        margin: "20px"
+    const cardStyle = {
+        padding: '20px',
+        marginLeft:'8.5vh',
+        marginTop:'4vh'
     }
+
     return (
         <div style={style}>
             <div>
@@ -29,12 +38,37 @@ export const Progress = () => {
                             </a>
                         </Grid>
                         <Grid item sm={9}>
-                            <h2 style={{textAlign:"center"}}>Progress</h2>
+                            <h2 style={{ textAlign: "center" }}>Progress</h2>
                         </Grid>
                     </Grid>
-                    <Grid item sm={4} style={margin}>
-                        <ProgressList />
-                    </Grid>
+                    <div style={divStyle}>
+                        <Grid container>
+                            <Grid style={cardStyle}>
+                                <ProgressList />
+                            </Grid>
+
+                            <Grid  style={cardStyle}>
+                                <ProgressList />
+                            </Grid>
+
+                            <Grid style={cardStyle}>
+                                <ProgressList />
+                            </Grid>
+                        </Grid>
+                        <Grid container>
+                            <Grid style={cardStyle}>
+                                <ProgressList />
+                            </Grid>
+
+                            <Grid  style={cardStyle}>
+                                <ProgressList />
+                            </Grid>
+
+                            <Grid style={cardStyle}>
+                                <ProgressList />
+                            </Grid>
+                        </Grid>
+                    </div>
                 </Grid>
             </div>
         </div>

@@ -42,7 +42,7 @@ export default function InputCardDesign({ setOpen }) {
                     />
                 </Paper>
                 <div className={classes.confirm}>
-                    <Button className={classes.btnconfirm} onClick={() => setOpen(false)}>
+                    <Button className={classes.btnconfirm} style={{backgroundColor: '#a6a2a2'}} onClick={() => setOpen(false)}>
                         Add Card</Button>
                     <IconButton onClick={() => setOpen(false)}>
                         <Clear />

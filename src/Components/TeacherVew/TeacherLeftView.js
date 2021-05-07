@@ -11,8 +11,12 @@ export default function TeacherLeftView() {
         height: '100vh'
     }
 
+    const leftContainer = {
+        overflowY: "scroll"
+    }
+
     return (
-        <div >
+        <div style={leftContainer}>
             <a href="/techview">
                 <ClassNames name="Common"/>
             </a>

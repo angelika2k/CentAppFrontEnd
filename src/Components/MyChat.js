@@ -10,13 +10,15 @@ export const MyChat = () => {
 
   var style = {
     paddingTop: "1px",
-    height: '95vh',
-    margin:"50px"
+    height: '85vh',
+    margin: "50px",
+    backgroundColor: "#F2F2F2",
+    boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
   }
 
-  var containerStyle = {
-    backgroundColor: "white",
-  }
+  // var containerStyle = {
+  //   backgroundColor: "white",
+  // }
 
   var ChatCollections = [
     {
@@ -102,24 +104,10 @@ export const MyChat = () => {
     }
   ]
 
-
-  // var openedChat = ChatCollections.find((chat) => {
-    
-  //   if (chat.id == ChatCollections.map((chat ,id)=> {
-  //     return chat.message
-  //   }
-  // })
-
-  // for(var id = 0; id < ChatCollections.length; id++){
-  //   var openedChat = ChatCollections[id]
-  //   console.log(ChatCollections.id)
-  // }
-  // }
-
-
   return (
-    <div style={style}>
-      <Grid container style={containerStyle}>
+    // <div style={style}>
+    <Grid style={style}>
+      <Grid container>
         <Grid item xs={3}>
           <Link to="/">
             <CentLogo />
@@ -128,15 +116,16 @@ export const MyChat = () => {
         <Grid item xs={9}>
           <ChatHeading />
         </Grid>
-        <Grid container>
-          <Grid item xs={3} >
-            <MyChatLeftBar chats={ChatCollections} />
-          </Grid>
-          <Grid item xs={9}>
-            <MyChatRightBar chat={ChatCollections} />
-          </Grid>
+      </Grid>
+      <Grid container >
+        <Grid item xs={3} >
+          <MyChatLeftBar chats={ChatCollections} />
+        </Grid>
+        <Grid item xs={9}>
+          <MyChatRightBar chat={ChatCollections} />
         </Grid>
       </Grid>
-    </div>
+    </Grid>
+    // </div>
   )
 }

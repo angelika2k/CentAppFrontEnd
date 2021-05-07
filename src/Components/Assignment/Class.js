@@ -19,13 +19,13 @@ export const Class = (props) => {
         borderRadius: '0px 40px 40px 35px',
         minWidth: '400px',
         float: 'left',
-        textAlign: 'right',
-        backgroundColor: 'powderblue',
-        background: "#efd9d1",
+        color: "#75726c",
+        backgroundColor: '#b0a48f',
+        border: " 1px solid #756D5E",
+        color: 'black',
         boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
         backdropFilter: "blur(4px)",
         WebkitBackdropFilter: " blur(4px)",
-        border: " 1px solid rgba(255, 255, 255, 0.18)",
         textAlign: "center"
     }
     const threeDots = {
@@ -49,49 +49,12 @@ export const Class = (props) => {
         textAlign: "center"
     }
     return (
-        <div>
-            <Grid container>
-                <Grid item sm={11}>
-                    <span style={styleReceiver}>
-                        <p>{props.classUpdate.type}</p>
-                    </span>
-                </Grid>
-                <Grid item sm={1}>
-                    <IconButton style={threeDots} onClick={handleClick}>
-                        <MoreHorizIcon />
-                    </IconButton>
-                    <Popover
-                        id={id}
-                        open={open}
-                        anchorEl={anchorEl}
-                        onClose={handleClose}
-                        anchorOrigin={{
-                            vertical: 'bottom',
-                            horizontal: 'center',
-                        }}
-                        transformOrigin={{
-                            vertical: 'top',
-                            horizontal: 'center',
-                        }}
-                    > 
-                        <List component="nav" aria-label="main mailbox folders">
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <PublishIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Upload my Assignment" />
-                            </ListItem>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <AlarmIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Remind me within 1 hour" />
-                            </ListItem>
-                        </List>
-
-                    </Popover>
-                </Grid>
+        <Grid container>
+            <Grid>
+                <span style={styleReceiver}>
+                    <p>{props.classUpdate.type}</p>
+                </span>
             </Grid>
-        </div>
+        </Grid>
     )
 }

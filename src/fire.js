@@ -1,7 +1,7 @@
-import firebase from 'fi'
+import firebase from 'firebase'
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const config = {
+const firebaseConfig = {
     apiKey: "AIzaSyCKFHkPqfR84NmAY8WfGPLJQDolOrtKCGU",
     authDomain: "cent-app-uki.firebaseapp.com",
     databaseURL: "https://cent-app-uki-default-rtdb.firebaseio.com",
@@ -12,6 +12,10 @@ const config = {
     measurementId: "G-H77HXTQCKS"
   };
 
-var fire = firebase.initializeApp(config);
+// var fire = firebase.initializeApp(config);
 
-export default fire;
+// export default fire;
+
+const firebaseApp = firebase.initializeApp(firebaseConfig)
+
+export default firebaseApp;

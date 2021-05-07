@@ -12,7 +12,7 @@ const useStyle = makeStyles((theme) => ({
         padding: theme.spacing(1, 1, 1, 2),
         margin: theme.spacing(0, 1, 1, 1),
         "&:hover": {
-            backgroundColor: fade('#000', 0.25),
+            backgroundColor: fade('#010', 0.25),
         }
     }
 }))
@@ -20,18 +20,17 @@ const useStyle = makeStyles((theme) => ({
 export default function InputContainer() {
     const classes = useStyle();
     const [open, setOpen] = useState(false);
- 
+
     return (
         <div className={classes.root} >
             <Collapse in={open}>
-                <InputCardDesign setOpen={setOpen}/>
+                <InputCardDesign setOpen={setOpen} />
             </Collapse>
             <Collapse in={!open}>
-                <Paper className={classes.addCard} elevation={0} onClick={() => setOpen(!open)}
-                   >
+                <Paper className={classes.addCard} elevation={0} onClick={() => setOpen(!open)}>
                     <Typography>
                         + Add a Card
-                </Typography>
+                    </Typography>
                 </Paper>
             </Collapse>
         </div>

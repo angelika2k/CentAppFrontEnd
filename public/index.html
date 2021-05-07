@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="icon" href="%PUBLIC_URL%/favicon.ico" /> -->
+  <link rel="icon"
+    href="data:image/png;base64,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"
+    type="image/icon type">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +25,15 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body  style="background-color: rgb(139, 207, 216);">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>
+    CENT
+  </title>
+</head>
+
+<body style="background-color:#dbdbd9;">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +43,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

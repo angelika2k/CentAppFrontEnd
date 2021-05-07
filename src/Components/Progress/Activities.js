@@ -18,12 +18,19 @@ const useStyle = makeStyles((theme) => ({
 export default function Activities(Card) {
     const classes = useStyle();
 
+    const styleSender = {
+        padding: '3px',
+        color: 'black',
+        backdropFilter: "blur(4px)",
+        WebkitBackdropFilter: " blur(4px)",
+    }
+
     return (
         <div>
-            <div>
-                <Paper className={classes.card}>
+            <div style={styleSender}>
+                <Paper className={classes.card} style={{ backgroundColor: '#c7c1c1', color: 'black' }}>
                     React Assignment
-                        </Paper>
+                </Paper>
             </div>
         </div>
     )

@@ -1,14 +1,20 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
+import { ChatTypingSpace } from './MyChat/ChatTypingSpace'
 import { TutoryRightBar } from './StudentViewCenter/TutoryRightBar'
 import TeacherLeftView from './TeacherVew/TeacherLeftView'
 import TeachingPlace from './TeacherVew/TeachingPlace'
 
 export default function TeacherView() {
     const style = {
-        paddingTop: "50px",
-        height: '100vh'
+        paddingTop: "1px",
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        height: '85vh',
+        margin: "50px",
+        width: '185vh',
+        backgroundColor: '#F2F2F2'
     }
+
     return (
         <div style={style}>
             <Grid container>
@@ -33,7 +39,9 @@ export default function TeacherView() {
                     <TeacherLeftView />
                 </Grid>
                 <Grid item sm={9}>
-                    <TutoryRightBar />
+                    <Grid container>
+                        <TutoryRightBar />
+                    </Grid>
                 </Grid>
             </Grid>
         </div>

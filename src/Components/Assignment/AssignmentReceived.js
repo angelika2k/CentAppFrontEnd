@@ -15,24 +15,20 @@ export const AssignmentReceived = (props) => {
 
     const styleReceiver = {
         padding: '10px',
-        // border: '1px outset #1C6EA4',
+        border: '1px outset #1C6EA4',
         borderRadius: '0px 40px 40px 35px',
         minWidth: '400px',
         float: 'left',
         textAlign: 'right',
-        backgroundColor: 'powderblue',
-        background: "#efd9d1",
+        backgroundColor: '#756d5e',
+        border: " 1px solid #ffffff",
+        color: 'white',
         boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
         backdropFilter: "blur(4px)",
         WebkitBackdropFilter: " blur(4px)",
-        border: " 1px solid rgba(255, 255, 255, 0.18)",
         textAlign: "center"
     }
     const threeDots = {
-        // width:'30px',
-        // backgroundColor:'pink',
-        // borderRadius:'30px 30px',
-        // border:'1px solid red'
         marginLeft: '-14px'
     }
     const [anchorEl, setAnchorEl] = React.useState(null);

@@ -7,12 +7,16 @@ import { ClassDeatils, Classes, ClassNames } from './ClassNames'
 export const TutoryLeftBar = () => {
 
 
+    const leftContainer = {
+        overflowY: "scroll"
+    }
+
   
     let names = ["CSS", "HTML", "React", "Java", "JavaScript", "PHP"]
-    let chat = ["hi dude"]
+    let teachers=["Danu", "Angel" ,"Amali", "Anne", "Rex", "Vino"]
 
     return (
-        <div>
+        <div style={leftContainer}>
             <a href="/stuview">
                  <ClassNames name="Common"  />
             </a>

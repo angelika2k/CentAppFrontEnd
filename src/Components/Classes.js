@@ -6,8 +6,17 @@ import { TutoryRightBar } from './StudentViewCenter/TutoryRightBar'
 
 export const Classes = () => {
     const style = {
-        paddingTop: "50px",
-        height: '100vh'
+        paddingTop: "1px",
+        boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+        height: '85vh',
+        margin: "50px",
+        width: '185vh',
+        backgroundColor: '#F2F2F2'
+
+    }
+
+    const leftContainer = {
+        overflowY: "scroll"
     }
 
     return (

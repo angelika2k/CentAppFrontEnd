@@ -11,8 +11,9 @@ export const ChatPerson = (props) => {
     const card = {
         padding: '2px',
         backgroundColor: '#ccffbd',
-        margin: '2px',
-        background: "#ccffbd",
+        marginTop: '2px',
+        background: "#D8D1C9",
+        color:'black',
         boxShadow: "0 8px 15px 0 rgba(31, 38, 135, 0.37)",
     }
 
